@@ -20,6 +20,11 @@ gem "importmap-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
+# Use SCSS for stylesheets
+gem 'sassc-rails', '>= 2.1.0'
+gem 'bootstrap', '~> 5.3.1'
+gem 'jquery-rails'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 

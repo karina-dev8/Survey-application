@@ -6,11 +6,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <% flash.each do |type, message| %>
+      <div id= "flash_message", class="alert alert-<%= type == 'notice' ? 'success' : 'danger' %>">
+        <%= message %>
+      </div>
+    <% end %>
+    <div class="center-container">
+      <div>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
